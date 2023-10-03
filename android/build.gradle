@@ -1,6 +1,8 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
+apply plugin: 'com.android.application'
+// apply plugin: 'com.google.gms.google-services:4.3.15'
 buildscript {
+
     ext {
         buildToolsVersion = "33.0.0"
         minSdkVersion = 21
@@ -13,9 +15,17 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        
     }
     dependencies {
         classpath("com.android.tools.build:gradle")
         classpath("com.facebook.react:react-native-gradle-plugin")
-    }
+        classpath 'com.google.gms:google-services:4.3.15'
+        // id 'com.google.gms.google-services' version '4.3.15' apply false
+        
+    }   
+}
+
+android {
+    compileSdk 33
 }

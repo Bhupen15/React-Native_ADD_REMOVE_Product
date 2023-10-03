@@ -26,7 +26,7 @@ const Product = (props: any) => {
     } else {
       setisAdded(false);
     }
-   
+
   }, [cartItem])
 
   return (
